@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Passeport</string>
+    <string name="label_translate">Traduire</string>
+    <string name="label_convert">Convertir</string>
+    <string name="label_carnet">Carnet</string>
+</resources>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/dim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dim" />
+
+    <LinearLayout
+        android:id="@+id/sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_sheet"
+        android:clickable="true"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="12dp">
+
+        <View
+            android:layout_width="36dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_grip" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/stamp"
+                style="@style/Stamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EUR" />
+
+            <TextView
+                android:id="@+id/rateInfo"
+                style="@style/Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:text="→ PHP" />
+
+            <TextView
+                android:id="@+id/openCarnet"
+                style="@style/Link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carnet" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Tu tapes" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:digits="0123456789.,"
+                android:fontFamily="@font/plex_mono_semibold"
+                android:hint="0"
+                android:imeOptions="flagNoExtractUi|actionDone"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:maxLength="12"
+                android:paddingTop="2dp"
+                android:paddingBottom="6dp"
+                android:singleLine="true"
+                android:textColor="@color/ink"
+                android:textColorHint="@color/line"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/inCur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/plex_mono_semibold"
+                android:text="€"
+                android:textColor="@color/soft"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <com.passeport.app.PerforationView
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_marginStart="-20dp"
+            android:layout_marginEnd="-20dp"
+            app:notches="true" />
+
+        <TextView
+            style="@style/Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Soit" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/plex_mono_semibold"
+                android:hint="0,00"
+                android:paddingTop="2dp"
+                android:paddingBottom="6dp"
+                android:singleLine="true"
+                android:textColor="@color/red"
+                android:textColorHint="@color/line"
+                android:textIsSelectable="true"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/outCur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/plex_mono_semibold"
+                android:text="PHP"
+                android:textColor="@color/soft"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/rateMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/plex_mono_regular"
+            android:textColor="@color/soft"
+            android:textSize="11sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/dirSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_switch"
+                android:orientation="horizontal"
+                android:padding="1.5dp">
+
+                <TextView
+                    android:id="@+id/dirEur"
+                    style="@style/Segment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="€ → PHP" />
+
+                <TextView
+                    android:id="@+id/dirPhp"
+                    style="@style/Segment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PHP → €" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/keep"
+                style="@style/Link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Garder ✓" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

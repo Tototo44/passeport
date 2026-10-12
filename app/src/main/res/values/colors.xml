@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="navy">#18284A</color>
+    <color name="red">#C7303B</color>
+    <color name="paper">#EEF1F6</color>
+    <color name="card">#FFFFFF</color>
+    <color name="ink">#1A1F2B</color>
+    <color name="soft">#66708A</color>
+    <color name="line">#C9D0DD</color>
+    <color name="dim">#730A1224</color>
+    <color name="notch">#8A92A3</color>
+</resources>

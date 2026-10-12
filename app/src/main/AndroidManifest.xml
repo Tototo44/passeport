@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_traduire"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Passeport">
+
+        <!-- Icône « Traduire » : ouvre le tiroir de traduction, clavier sorti -->
+        <activity
+            android:name=".TranslateActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:icon="@mipmap/ic_traduire"
+            android:label="@string/label_translate"
+            android:taskAffinity="com.passeport.app.traduire"
+            android:theme="@style/Theme.Passeport.Sheet"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Icône « Convertir » : ouvre le tiroir de conversion, pavé numérique sorti -->
+        <activity
+            android:name=".ConvertActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:icon="@mipmap/ic_convertir"
+            android:label="@string/label_convert"
+            android:taskAffinity="com.passeport.app.convertir"
+            android:theme="@style/Theme.Passeport.Sheet"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Le Carnet : historique, taux du jour et clé DeepL -->
+        <activity
+            android:name=".CarnetActivity"
+            android:exported="false"
+            android:label="@string/label_carnet"
+            android:windowSoftInputMode="adjustResize" />
+    </application>
+</manifest>
